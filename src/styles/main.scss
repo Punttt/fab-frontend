@@ -14,7 +14,7 @@ $color-text-on-dark:      #FAF5EB;  // text på mörk bakgrund (cognac/grön)
 $color-primary:           #C99877;  // cognac - knappar, CTA, accent
 $color-primary-hover:     #B8845F;  // mörkare cognac vid hover (justera vid behov)
 
-$color-secondary:         #B5BE7F;  // olivgrön - sektioner, footer-bakgrund
+$color-secondary:         #CCD5AE;  // olivgrön - sektioner, footer-bakgrund
 $color-secondary-hover:   #A0A96A;  // mörkare oliv vid hover
 
 // Funktionella färger (lägg till senare vid behov)
@@ -178,6 +178,7 @@ header {
 
 // contact
 #contact {
+    background-color: $color-secondary;
     h2 {
         font-size: 2.2rem;
         color: $color-primary;
