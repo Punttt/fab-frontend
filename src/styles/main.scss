@@ -46,30 +46,50 @@ body {
 
 // Section för HEADER NAVBAR
 header {
-  width: 100%;
-  padding: 1.5rem 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: absolute; /* ligger ovanpå hero-bilden */
-  top: 0;
-  left: 0;
-  z-index: 10;
-
-  .wrapper {
+    width: 100%;
+    padding: 1.5rem 1rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 2rem;
+    position: absolute; /* ligger ovanpå hero-bilden */
+    top: 0;
+    left: 0;
+    z-index: 10;
 
-    .logo {
-        max-width: 75px;
+    .wrapper {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
 
-        img {
-            width: 100%;
-            height: auto;
+        .logo {
+            max-width: 75px;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li a {
+                color: $color-text-on-dark;
+                font-weight: 600;
+                font-size: 1rem;
+                text-decoration: none;
+
+                &:hover {
+                    opacity: 0.8;
+                    border-bottom: 4px solid $color-secondary;
+                }
+            }
         }
     }
-  }
 }
 
 // HERO
