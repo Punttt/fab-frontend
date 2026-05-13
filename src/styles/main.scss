@@ -44,7 +44,20 @@ body {
     background-color: #B5BE7F;
 }
 
-// Section för HEADER
+// Section för HEADER NAVBAR
+header {
+  width: 100%;
+  padding: 1.5rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute; /* ligger ovanpå hero-bilden */
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+// HERO
 
 
 // Containers
