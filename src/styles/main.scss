@@ -47,7 +47,7 @@ body {
 // Section för HEADER NAVBAR
 header {
   width: 100%;
-  padding: 1.5rem 0;
+  padding: 1.5rem 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,10 +55,17 @@ header {
   top: 0;
   left: 0;
   z-index: 10;
+
+  .wrapper {
+    display: flex;
+  }
 }
 
 // HERO
-
+.hero {
+    width: 100%;
+    height: 100dvh;
+}
 
 // Containers
 .container {
