@@ -41,6 +41,7 @@ body {
     font-family: "Sen", sans-serif;
     font-size: 16px;
     line-height: 1.6;
+    background-color: $color-background;
 }
 
 // Section för HEADER NAVBAR
@@ -91,6 +92,8 @@ header {
     }
 }
 
+// ----------------- Sections --------------------
+
 // HERO
 .hero {
     width: 100%;
@@ -126,10 +129,37 @@ header {
     }
 }
 
+
+// about
+#about {
+    h2 {
+        font-size: 2.2rem;
+        color: $color-primary;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        margin-bottom: 1rem;
+    }
+}
+
+// weekly menu
+#weekly-menu {
+    background-color:$color-secondary;
+
+    h2 {
+        font-size: 2.2rem;
+        color: $color-text-on-dark;
+        margin-bottom: 1rem;
+    }
+}
+
+// Utility --------------------------
 // Containers
 .container {
     max-width: 900px;
     margin: 0 auto;
+    padding: 4rem 2rem;
 }
 
 // Knappar
@@ -146,4 +176,10 @@ header {
     &:hover {
       background: $color-primary-hover;
     }
+}
+
+// cards
+.card {
+    border-radius: 10px;
+    background-color: $color-background;
 }
