@@ -177,6 +177,27 @@ header {
 }
 
 // contact
+#contact {
+    h2 {
+        font-size: 2.2rem;
+        color: $color-primary;
+        margin-bottom: 1rem;
+    }
+    h3 {
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .contact-block {
+            ul {
+                list-style: none;
+            }
+        }
+    }
+}
 
 
 // Utility --------------------------
@@ -211,3 +232,5 @@ header {
     min-height: 150px;
     text-align: center;
 }
+
+// mediaqueries
