@@ -41,13 +41,12 @@ body {
     font-family: "Sen", sans-serif;
     font-size: 16px;
     line-height: 1.6;
-    background-color: #B5BE7F;
 }
 
 // Section för HEADER NAVBAR
 header {
     width: 100%;
-    padding: 1.5rem 1rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -108,8 +107,15 @@ header {
 
     .hero-content {
         color: $color-text-on-dark;
-        max-width: 500px;
+        max-width: 550px;
         text-align: center;
+
+        h1 {
+            font-size: 3rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
 
         .hero-buttons {
             margin-top: 1.5rem;
