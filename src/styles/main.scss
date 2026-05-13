@@ -58,6 +58,17 @@ header {
 
   .wrapper {
     display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .logo {
+        max-width: 75px;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
   }
 }
 
