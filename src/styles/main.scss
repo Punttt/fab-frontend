@@ -160,6 +160,25 @@ header {
     }
 }
 
+// booking
+#booking {
+    h2 {
+        font-size: 2.2rem;
+        color: $color-primary;
+        margin-bottom: 1rem;
+    }
+    p {
+        margin-bottom: 1.5rem;
+    }
+
+    .book-table {
+        margin-bottom: 2rem;
+    }
+}
+
+// contact
+
+
 // Utility --------------------------
 // Containers
 .container {
