@@ -152,6 +152,12 @@ header {
         color: $color-text-on-dark;
         margin-bottom: 1rem;
     }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
 }
 
 // Utility --------------------------
@@ -182,4 +188,7 @@ header {
 .card {
     border-radius: 10px;
     background-color: $color-background;
+    padding: 1rem;
+    min-height: 150px;
+    text-align: center;
 }
