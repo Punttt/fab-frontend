@@ -65,6 +65,26 @@ header {
 .hero {
     width: 100%;
     height: 100dvh;
+    background-image: url("/public/pictures/restaurant-hero.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    .hero-content {
+        color: $color-text-on-dark;
+        max-width: 500px;
+        text-align: center;
+
+        .hero-buttons {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+    }
 }
 
 // Containers
