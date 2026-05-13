@@ -1,0 +1,68 @@
+// Variebler
+// === Färgpalett ===
+
+// Bakgrunder
+$color-background:        #FAF5EB;
+$color-surface:           #FFFFFF;  // kort, formulär, ovanpå bakgrund
+
+// Text
+$color-text-primary:      #393939;  // brödtext, rubriker
+$color-text-secondary:    #707070;  // sekundär text, metadata (om du behöver)
+$color-text-on-dark:      #FAF5EB;  // text på mörk bakgrund (cognac/grön)
+
+// Accent / brand
+$color-primary:           #C99877;  // cognac - knappar, CTA, accent
+$color-primary-hover:     #B8845F;  // mörkare cognac vid hover (justera vid behov)
+
+$color-secondary:         #B5BE7F;  // olivgrön - sektioner, footer-bakgrund
+$color-secondary-hover:   #A0A96A;  // mörkare oliv vid hover
+
+// Funktionella färger (lägg till senare vid behov)
+// $color-success:        #...;
+// $color-error:          #...;
+// $color-warning:        #...;
+
+// Borders
+$color-border:            #E5DDD0;  // diskreta linjer (du kan behöva justera)
+
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: "Sen", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+// Containers
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+// Knappar
+.btn {
+    height: 2.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 50px;
+    border: none;
+    background: $color-primary;
+    color: $color-text-on-dark;
+    font: inherit;
+    font-weight: 500;
+    cursor: pointer;
+
+    &:hover {
+      background: $color-primary-hover;
+    }
+}
