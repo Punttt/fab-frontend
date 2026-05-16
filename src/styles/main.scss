@@ -37,6 +37,11 @@ a {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 body {
     font-family: "Sen", sans-serif;
     font-size: 16px;
@@ -91,6 +96,10 @@ header {
             }
         }
     }
+}
+
+header.dark {
+    background-color: $color-primary;
 }
 
 footer {
@@ -241,11 +250,21 @@ footer {
     }
 }
 
+.booking-page {
+    margin-top: 100px;
+}
+
 
 // Utility --------------------------
 // Containers
 .container {
     max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.container-sm {
+    max-width: 650px;
     margin: 0 auto;
     padding: 4rem 2rem;
 }
