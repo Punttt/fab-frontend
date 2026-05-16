@@ -227,9 +227,11 @@ footer {
         margin-bottom: 0.5rem;
     }
 
+    p {
+        margin-bottom: 1rem;
+    }
+
     .contact-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
 
         .contact-block {
             ul {
