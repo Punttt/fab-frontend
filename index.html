@@ -18,7 +18,7 @@
           <ul>
             <li><a href="/">HEM</a></li>
             <li><a href="/">MENY</a></li>
-            <li><a href="/">OM OSS</a></li>
+            <li><a href="#about">OM OSS</a></li>
           </ul>
         </nav>
       </div>
@@ -31,13 +31,137 @@
         <p>Smakfull lunch på vardagar, minnesvärda event på helger.</p>
 
         <div class="hero-buttons">
-          <a href="/" class="btn">BOKA BORD</a>
-          <a href="/" class="btn">SE VECKANS MENY</a>
+          <a href="/booking" class="btn">BOKA BORD</a>
+          <a href="#weekly-menu" class="btn">SE VECKANS MENY</a>
         </div>
       </div>
     </section>
 
-    <h1>Startsida</h1>
+    <main>
+      <section id="about">
+        <div class="container">
+          <h2>VÄLKOMMEN TILL OSS</h2>
+          <p>
+            Vi tror att lunch kan vara mer än bara mat mellan två möten. 
+            På fab lagar vi varje vardag en lunch värd att se fram emot — säsongsbaserad, 
+            generös och alltid med ett litet handavtryck. När helgen kommer ställer vi om: 
+            borden flyttas, ljuset dämpas, och lokalen blir en plats för konferenser, 
+            kickoffer och kvällar att minnas. Mitt i Sundsvall, mitt i veckan, mitt i livet.
+          </p>
+          <p>
+            Lokalen ligger mitt i stan, med stora fönster mot gatan och en inredning som 
+            balanserar industriellt och varmt. På vardagar handlar det om snabb och god lunch — 
+            på helger ställer vi om för konferenser, fester och privata event. Stora sällskap 
+            eller små, vi anpassar lokalen efter tillfället och sköter allt det praktiska. 
+            Hör av er med era idéer, så formar vi något ni kommer minnas.
+          </p>
+        </div>
+      </section>
+
+      <section id="weekly-menu">
+        <div class="container">
+          <h2>VECKANS LUNCHER</h2>
+          <div class="wrapper">
+            <div class="card">
+              <h3>MÅNDAG</h3>
+              <p>Kycklingfilé serveras med stekt potatis, dragon och parmesansås.</p>
+            </div>
+            <div class="card">
+              <h3>TISDAG</h3>
+              <p>Kycklingfilé serveras med stekt potatis, dragon och parmesansås.</p>
+            </div>
+            <div class="card">
+              <h3>ONSDAG</h3>
+              <p>Ugnsbakad kungsflundra serveras med färskpotatis, vitvinssås, rädisa & sockerärtor.</p>
+            </div>
+            <div class="card">
+              <h3>TORSDAG</h3>
+              <p>Kycklingfilé serveras med stekt potatis, dragon och parmesansås.</p>
+            </div>
+            <div class="card">
+              <h3>FREDAG</h3>
+              <p>Ugnsbakad kungsflundra serveras med färskpotatis, vitvinssås, rädisa & sockerärtor.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="booking">
+        <div class="container">
+          <h2>BOKNING OCH KONFERENS</h2>
+          
+          <div class="book-table">
+            <p>Vill du vara säker på en plats? Boka bord redan nu — vardagar mellan 10:30 och 14:00.</p>
+            <a href="/booking" class="btn">BOKA BORD</a>
+          </div>
+          <div class="book-konferens">
+            <p>Planerar du en konferens, kickoff eller ett firande? Vi tar emot allt från intima middagar 
+              till större event och formar gärna upplevelsen efter era önskemål. Hör av er, så hittar vi rätt lösning tillsammans.
+            </p>
+            <a href="/booking" class="btn">BOKA KONFERENS</a>
+          </div>
+        </div>
+      </section>
+      
+      <section id="contact">
+        <div class="container">
+          <h2>KONTAKTA OSS</h2>
+          <div class="contact-grid">
+            <p>
+              På FAB står smak, kvalitet och service i fokus. 
+              Vill du veta mer om vår lunchmeny eller diskutera 
+              catering och event? Tveka inte att kontakta oss.
+            </p>
+
+            <div class="contact-block">
+              <h3>Telefon:</h3>
+              <p>060 - 123 45</p>
+
+              <h3>E-post:</h3>
+              <p>restaurangen@test.se</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="wrapper">
+        <div class="logo-section">
+          <img src="/public/icons/logo.png" alt="fab logotyp">
+          <p>Lunch & konferens i centrala Sundsvall</p>
+        </div>
+        <div class="links-section">
+          <h3>Sidor</h3>
+            <nav>
+              <ul>
+                <li><a href="/">Hem</a></li>
+                <li><a href="#weekly-menu">Meny</a></li>
+                <li><a href="/booking">Bokning</a></li>
+              </ul>
+            </nav>
+        </div>
+        <div class="openings-section">
+          <h3>Öppettider</h3>
+          <ul>
+            <li><span>MÅN-FRE:</span> 10:30 - 14:00</li>
+            <li><span>LÖR-SÖN:</span> STÄNGT</li>
+          </ul>
+        </div>
+        <div class="location-section">
+          <h3>Hitta hit</h3>
+          <p class="title">Telefon</p>
+          <p>060 - 123 45</p>
+          <p class="title">E-post</p>
+          <p>exempel@restaurangen.se</p>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <p>&copy; 2025 pjwebb</p>
+
+        <a href="/login">Logga in</a>
+      </div>
+    </footer>
     <script type="module" src="/src/js/main.js"></script>
   </body>
 </html>
