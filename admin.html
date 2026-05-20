@@ -16,6 +16,7 @@
       </nav>
     </header>
     <main>
+      <!-- Välja vecka och år för att se om det finns något registrerat i databasen -->
       <section id="select-week">
         <h2>Välj vecka</h2>
 
@@ -34,7 +35,47 @@
         </form>
 
         <p id="weekStatus"></p>
-    </section>
+      </section>
+
+      <!--  -->
+      <section id="edit-menu" class="hidden">
+        <h2>Redigera veckomeny</h2>
+
+        <form class="menu-day">
+          <h3>Måndag</h3>
+          <textarea name="dish" required></textarea>
+          <input type="hidden" name="day_of_week" value="monday">
+          <button type="submit">Spara</button>
+        </form>
+
+        <form class="menu-day">
+          <h3>Tisdag</h3>
+          <textarea name="dish" required></textarea>
+          <input type="hidden" name="day_of_week" value="tuesday">
+          <button type="submit">Spara</button>
+        </form>
+
+        <form class="menu-day">
+          <h3>Onsdag</h3>
+          <textarea name="dish" required></textarea>
+          <input type="hidden" name="day_of_week" value="wednesday">
+          <button type="submit">Spara</button>
+        </form>
+
+        <form class="menu-day">
+          <h3>Torsdag</h3>
+          <textarea name="dish" required></textarea>
+          <input type="hidden" name="day_of_week" value="thursday">
+          <button type="submit">Spara</button>
+        </form>
+
+        <form class="menu-day">
+          <h3>Fredag</h3>
+          <textarea name="dish" required></textarea>
+          <input type="hidden" name="day_of_week" value="friday">
+          <button type="submit">Spara</button>
+        </form>
+      </section>
 
     </main>
     <script type="module" src="/src/js/admin.js"></script>
