@@ -1,13 +1,26 @@
 <!doctype html>
-<html lang="sv">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FAB - Lunch i Sunsvall</title>
+    <title>Login - FAB</title>
+    <link rel="stylesheet" href="/src/styles/main.scss">
   </head>
-  <body>
-    <h1>Login</h1>
-    <script type="module" src="/src/main.js"></script>
+  <body class="auth-page">
+    <main class="card">
+      <h1>Logga in</h1>
+      <form>
+        <label for="username">Användarnamn</label>
+        <input type="text" name="username" id="username">
+
+        <label for="password">Lösenord</label>
+        <input type="password" name="password" id="password">
+
+        <input type="submit" value="Logga in" class="btn">
+      </form>
+      <p id="message"></p>
+    </main>
+    <script type="module" src="/src/js/login.js"></script>
   </body>
 </html>
