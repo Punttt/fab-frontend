@@ -255,6 +255,9 @@ footer {
 .booking-page {
     margin-top: 100px;
 
+    .booking-tabs {
+        margin: 1rem 0;
+    }
     form {
         display: flex;
         flex-direction: column;
