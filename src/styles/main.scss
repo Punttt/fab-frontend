@@ -17,10 +17,11 @@ $color-primary-hover:     #B8845F;  // mörkare cognac vid hover (justera vid be
 $color-secondary:         #CCD5AE;  // olivgrön - sektioner, footer-bakgrund
 $color-secondary-hover:   #A0A96A;  // mörkare oliv vid hover
 
-// Funktionella färger (lägg till senare vid behov)
-// $color-success:        #...;
-// $color-error:          #...;
-// $color-warning:        #...;
+// Funktionella färger errors & successmeddelande
+$success-bg: #EAF3DE;
+$success-text: #27500A;
+$error-bg: #FCEBEB;
+$error-text: #791F1F;
 
 // Borders
 $color-border:            #E5DDD0;  // diskreta linjer (du kan behöva justera)
@@ -365,6 +366,29 @@ footer {
 
 .hidden {
     display: none;
+}
+
+// Felmeddelande
+// Felmeddelande - error / success
+#message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 5px;
+  text-align: center;
+
+  &:empty {
+    display: none;
+  }
+
+  &.success {
+    background: $success-bg;
+    color: $success-text;
+  }
+
+  &.error {
+    background: $error-bg;
+    color: $error-text;
+  }
 }
 
 // mediaqueries
