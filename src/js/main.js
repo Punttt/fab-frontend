@@ -11,3 +11,20 @@ const dayNames =  {
     friday: "FREDAG"
 };
 
+const dayOrder = ["monday","tuesday","wednesday","thursday","friday"];
+
+// HHämtar veckans meny
+async function loadWeeklyMenu() {
+    const container = document.getElementById("menu-container");
+
+    try {
+        const response = await fetch(`${API_URL}/menu/current`);
+
+        if(!response.ok) {
+            container.innerHTML = "<p>Veckans menu är ännu inte publicerad</p>";
+        }
+    } catch (error) {
+        console.error("Kunde inte hämta menyn:", error);
+        container.innerHTML = "<p>Kunde inte ladda menyn just nu.</p>";
+    }
+}
