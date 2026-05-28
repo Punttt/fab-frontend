@@ -1,7 +1,15 @@
-const date = new Date();
+import { API_URL, showMessage } from "./api.js";
 
-const year = date.getFullYear();
+// Hämtar JWT token från session storage
+const token = sessionStorage.getItem("token");
 
-const week = getWeekNumber(new Date());
+// Om inget token finns, skicka tillbaka till login sidan
+if(!token) {
+    window.location.href = "/login";
+}
 
-console.log(year + week);
+// När token raderat redirect till login-sidan
+document.getElementById("logoutBtn").addEventListener("click", () => {
+    sessionStorage.removeItem("token");
+    window.location.href = "/login";
+});
