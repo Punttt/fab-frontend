@@ -34,9 +34,21 @@ async function loadWeeklyMenu() {
             return;
         }
 
-        
+        const sortedItems = dayOrder
+            .map(day => menu.items.find(item => item.day_of_week === day))
+            .filter(item => item); // tar boet dagar som saknas.
+
+        // Bygga korten för HTML - sidan
+        container.innerHTML = sortedItems.map(item => `
+                <div class="card">
+                    <h3>${dayNames[item.day_of_week]}</h3>
+                    <p>${item.dish}</p>
+                </div>
+            `).join("");
     } catch (error) {
         console.error("Kunde inte hämta menyn:", error);
         container.innerHTML = "<p>Kunde inte ladda menyn just nu.</p>";
     }
 }
+
+loadWeeklyMenu();
