@@ -37,7 +37,7 @@ weekForm.addEventListener("submit", async (e) => {
             showEditSection();
         } else if (response.status === 404) {
             // Om veckan inte finns, så ska den skapas
-            await createWeek(week, year);
+            await createWeek(year, week);
         } else {
             showMessage("weekStatus", "Kunde inte ladda veckan", "error");
         }
