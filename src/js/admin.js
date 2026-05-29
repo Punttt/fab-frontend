@@ -142,5 +142,20 @@ dayForm.forEach(form => {
 
 // Funktion för att fylla formuläret med veckans meny
 function fillFormsWithCurrentMenu() {
-    
+    dayForm.forEach(form => {
+        const dayOfWeek = form.day_of_week.value;
+        const textarea = form.dish;
+
+        // Hittar motsvarande item om det finns
+        const existing = currentItems.find(item => item.day_of_week === dayOfWeek);
+
+        // Validering om det fins
+        if (existing) {
+            textarea.value = existing.dish;
+            form.querySelector("button").textContent = "Uppdatera";
+        } else {
+            textarea.value = "";
+            form.querySelector("button").textContent = "Spara";
+        }
+    })
 }
