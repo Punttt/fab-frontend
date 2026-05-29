@@ -58,6 +58,24 @@ function showEditSection(){
 // Funktioner
 async function createWeek(year, week) {
     try {
+        const response = await fetch(`${API_URL}/menu`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`
+            },
+            body: JSON.stringify({ week_number: Number(week), year: Number(year) })
+        });
+
+        const data = await response.json();
+
+        if(response.ok) {
+            currentMenuId = data.menu.id;
+            showMessage("weekStatus", `Ny veckomeny skapad för vecka ${week}, ${year}.`, "success" );
+            showEditSection();
+        } else {
+            showMessage("weekStatus", data.error || "Kunde inte skapa en vecka just nu", "error");
+        }
 
     } catch (error) {
         console.error(error);
