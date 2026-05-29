@@ -1,3 +1,16 @@
+// Variabler
+// Accent / brand
+$color-primary:           #C99877;  // cognac - knappar, CTA, accent
+$color-primary-hover:     #B8845F;  // mörkare cognac vid hover (justera vid behov)
+
+// Funktionella färger errors & successmeddelande
+$success-bg: #EAF3DE;
+$success-text: #27500A;
+$error-bg: #FCEBEB;
+$error-text: #791F1F;
+
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -9,6 +22,9 @@
 }
 
 body {
+    font-family: "Sen", sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
     background-color:beige;
     line-height: 1.6;
     font-size: 16px;
@@ -28,8 +44,89 @@ p {
 }
 
 main {
-    max-width: 1100px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 1rem;
     background-color: #fff;
+}
+
+// sections
+#select-week {
+    margin-bottom: 2rem;
+}
+#edit-menu {
+    margin-bottom: 2rem;
+
+    .menu-day{
+        margin-bottom: 1rem;
+    }
+}
+
+// Form
+form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    input, textarea {
+        width: 100%;
+        height: 2.5rem;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+        border-radius: 5px;
+        font-size: 14px;
+        font: inherit;
+
+        &:focus {
+            outline: none;
+            border-width: 1px;
+        }
+    }
+}
+
+// Knappar
+button {
+    padding: 0.75rem 1rem;
+    border-radius: 50px;
+    border: none;
+    font: inherit;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: $color-primary;
+    color: #fff;
+
+    &:hover {
+      opacity: 0.7;
+    }
+}
+
+#logoutBtn{
+    background-color: $error-text;
+}
+
+// Felmeddelande - error / success
+#message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 5px;
+  text-align: center;
+
+  &:empty {
+    display: none;
+  }
+
+  &.success {
+    background: $success-bg;
+    color: $success-text;
+  }
+
+  &.error {
+    background: $error-bg;
+    color: $error-text;
+  }
 }
