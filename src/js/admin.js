@@ -27,9 +27,25 @@ weekForm.addEventListener("submit", async (e) => {
     const year = weekForm.year.value;
 
     try {
+        // Hämtar veckomenyn
+        const response = await fetch(`${API_URL}/menu/${year}/${week}`);
+
+        if(response.ok) {
+            const menu = await response.json();
+            currentMenuId = menu.id;
+            showMessage("weekStatus", `Veckomenyn för vecka ${week}, ${year} laddad`);
+            showEditSection();
+        }
 
     } catch (error) {
         console.error(error);
         showMessage("weekStatus", "Kunde inte ansluta till servern", "error");
     }
 }); 
+
+
+// VISA / REDIGERA SECTIONEN
+function showEditSection(){
+    const editSection = document.getElementById("edit-menu");
+    editSection.classList.remove("hidden");
+}
