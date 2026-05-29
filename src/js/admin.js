@@ -98,7 +98,7 @@ dayForm.forEach(form => {
 
         const dish = form.dish.value.trim();
         const dayOfWeek = form.day_of_week.value;
-        const burron = form.querySelector("button");
+        const button = form.querySelector("button");
 
         // Validerar om man skrivit en rätt
         if (!dish) {
@@ -107,6 +107,26 @@ dayForm.forEach(form => {
         }
 
         try {
+            const response = await fetch(`${API_URL}/menu/item`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
+                },
+                body: JSON.stringify({
+                    weekly_menu_id: currentMenuId,
+                    day_of_week: dayOfWeek,
+                    dish: dish
+                })
+            });
+
+            if(response.ok) {
+                button.textContent = "Sparad!";
+                setTimeout(() => {button.textContent = "Spara"; }, 2000);
+            } else {
+                const data = await response.json();
+                alert(data.error || "Kunde inte spara den nya rätten");
+            }
 
         } catch (error) {
             console.error(error);
