@@ -39,7 +39,7 @@ weekForm.addEventListener("submit", async (e) => {
             // Om veckan inte finns, så ska den skapas
             await createWeek(week, year);
         } else {
-
+            showMessage("weekStatus", "Kunde inte ansluta till servern", "error");
         }
 
     } catch (error) {
