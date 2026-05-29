@@ -111,19 +111,28 @@ dayForm.forEach(form => {
             return;
         }
 
+        // Kontrollera om dagen redan finns.
+        const existing = currentItems.find(item => item.day_of_week === dayOfWeek);
+
         try {
-            const response = await fetch(`${API_URL}/menu/item`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": `Bearer ${token}`
-                },
-                body: JSON.stringify({
-                    weekly_menu_id: currentMenuId,
-                    day_of_week: dayOfWeek,
-                    dish: dish
-                })
-            });
+
+            let response;
+            if (existing){
+
+            } else {
+                response = await fetch(`${API_URL}/menu/item`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`
+                    },
+                    body: JSON.stringify({
+                        weekly_menu_id: currentMenuId,
+                        day_of_week: dayOfWeek,
+                        dish: dish
+                    })
+                });
+            }
 
             if(response.ok) {
                 button.textContent = "Sparad!";
