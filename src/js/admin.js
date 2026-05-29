@@ -35,6 +35,11 @@ weekForm.addEventListener("submit", async (e) => {
             currentMenuId = menu.id;
             showMessage("weekStatus", `Veckomenyn för vecka ${week}, ${year} laddad`);
             showEditSection();
+        } else if (response.status === 404) {
+            // Om veckan inte finns, så ska den skapas
+            await createWeek(week, year);
+        } else {
+
         }
 
     } catch (error) {
@@ -48,4 +53,9 @@ weekForm.addEventListener("submit", async (e) => {
 function showEditSection(){
     const editSection = document.getElementById("edit-menu");
     editSection.classList.remove("hidden");
+}
+
+// Funktioner
+async function createWeek(year, week) {
+    console.log(week, year);
 }
