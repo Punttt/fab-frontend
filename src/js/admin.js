@@ -118,8 +118,17 @@ dayForm.forEach(form => {
 
             let response;
             if (existing){
-
+                // PUT för att uppdatera en rätt som redan finns.
+                response = await fetch(`${API_URL}/menu/item/${existing.id}`, {
+                    method: "PUT",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "Authorization": `Bearer ${token}`
+                    },
+                    body: JSON.stringify({ dish })
+                });               
             } else {
+                // POST - skapar ny rätt för dagen (om ringen rätt finns)
                 response = await fetch(`${API_URL}/menu/item`, {
                     method: "POST",
                     headers: {
@@ -135,11 +144,19 @@ dayForm.forEach(form => {
             }
 
             if(response.ok) {
+                const data = await response.json();
+
+                if(!existing) {
+                    currentItems.push(data.item)
+                } else {
+                    existing.dish = dish
+                }
+
                 button.textContent = "Sparad!";
-                setTimeout(() => {button.textContent = "Spara"; }, 2000);
+                setTimeout(() => {button.textContent = existing ? "Uppdatera" : "Uppdatera"; }, 2000);
             } else {
                 const data = await response.json();
-                alert(data.error || "Kunde inte spara den nya rätten");
+                alert(data.error || "Kunde inte spara");
             }
 
         } catch (error) {
