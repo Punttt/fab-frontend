@@ -9,6 +9,7 @@ if(!token) {
 }
 
 let currentMenuId = null;
+let currentItems = []; // Sparar rätter för den valda veckan
 
 // När token raderat redirect till login-sidan
 document.getElementById("logoutBtn").addEventListener("click", () => {
@@ -33,8 +34,11 @@ weekForm.addEventListener("submit", async (e) => {
         if(response.ok) {
             const menu = await response.json();
             currentMenuId = menu.id;
+            currentItems = menu.items || [];
+
             showMessage("weekStatus", `Veckomenyn för vecka ${week}, ${year} laddad`);
             showEditSection();
+            fillFormsWithCurrentMenu();
         } else if (response.status === 404) {
             // Om veckan inte finns, så ska den skapas
             await createWeek(year, week);
@@ -71,6 +75,7 @@ async function createWeek(year, week) {
 
         if(response.ok) {
             currentMenuId = data.menu.id;
+            currentItems = []; 
             showMessage("weekStatus", `Ny veckomeny skapad för vecka ${week}, ${year}.`, "success" );
             showEditSection();
         } else {
@@ -134,3 +139,8 @@ dayForm.forEach(form => {
         }
     });
 })
+
+// Funktion för att fylla formuläret med veckans meny
+function fillFormsWithCurrentMenu() {
+    
+}
