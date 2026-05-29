@@ -82,3 +82,35 @@ async function createWeek(year, week) {
         showMessage("weekStatus", "Kunde inte ansluta till servern", "error");
     }
 }
+
+// Spara en ny rätt för veckan.
+const dayForm = document.querySelectorAll(".menu-day");
+
+dayForm.forEach(form => {
+    form.addEventListener("submit", async (e) =>{
+        e.preventDefault();
+
+        // måste ladda en vecka
+        if(!currentMenuId) {
+            alert("Ladda en vecka först");
+            return;
+        }
+
+        const dish = form.dish.value.trim();
+        const dayOfWeek = form.day_of_week.value;
+        const burron = form.querySelector("button");
+
+        // Validerar om man skrivit en rätt
+        if (!dish) {
+            alert("Skriv in en rätt");
+            return;
+        }
+
+        try {
+
+        } catch (error) {
+            console.error(error);
+            alert("Kunde inte ansluta till servern.");
+        }
+    });
+})
