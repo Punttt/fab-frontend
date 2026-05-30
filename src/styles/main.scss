@@ -161,6 +161,7 @@ footer {
         color: $color-text-on-dark;
         max-width: 550px;
         text-align: center;
+        padding: 0 1rem;
 
         h1 {
             font-size: 3rem;
@@ -392,3 +393,60 @@ footer {
 }
 
 // mediaqueries
+
+// Tablet
+@media (max-width: 768px) {
+    #weekly-menu {
+        .wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .hero {
+
+        .hero-content {
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+
+                .btn {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+// Mobile
+@media (max-width: 480px) {
+    #weekly-menu {
+        .wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    header {
+        .wrapper {
+            nav ul {
+                li a{
+                    font-size: 0.9rem;
+                }
+            }
+        }
+        
+        .btn {
+            display: none;
+        }
+    }
+
+    footer {
+        .wrapper {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    }
+}
