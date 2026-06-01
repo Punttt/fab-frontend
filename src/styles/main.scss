@@ -17,10 +17,11 @@ $color-primary-hover:     #B8845F;  // mörkare cognac vid hover (justera vid be
 $color-secondary:         #CCD5AE;  // olivgrön - sektioner, footer-bakgrund
 $color-secondary-hover:   #A0A96A;  // mörkare oliv vid hover
 
-// Funktionella färger (lägg till senare vid behov)
-// $color-success:        #...;
-// $color-error:          #...;
-// $color-warning:        #...;
+// Funktionella färger errors & successmeddelande
+$success-bg: #EAF3DE;
+$success-text: #27500A;
+$error-bg: #FCEBEB;
+$error-text: #791F1F;
 
 // Borders
 $color-border:            #E5DDD0;  // diskreta linjer (du kan behöva justera)
@@ -148,7 +149,7 @@ footer {
     height: 100dvh;
     background-image:
         linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.25)),
-        url("/public/pictures/restaurant-hero.webp");
+        url("/pictures/restaurant-hero.webp");
     background-size: cover;
     background-position: center;
     display: flex;
@@ -160,6 +161,7 @@ footer {
         color: $color-text-on-dark;
         max-width: 550px;
         text-align: center;
+        padding: 0 1rem;
 
         h1 {
             font-size: 3rem;
@@ -222,6 +224,8 @@ footer {
     .book-table {
         margin-bottom: 2rem;
     }
+
+
 }
 
 // contact
@@ -252,8 +256,75 @@ footer {
 
 .booking-page {
     margin-top: 100px;
+
+    .booking-tabs {
+        margin: 1rem 0;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        input, select {
+            width: 100%;
+            height: 2.5rem;
+            padding: 0 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            font-size: 14px;
+            font: inherit;
+
+            &:focus {
+                outline: none;
+                border-width: 1px;
+            }
+        }
+    }
 }
 
+// Login page
+.auth-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;   
+    height: 100dvh;
+
+    .card {
+        background-color: #fff;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        label {
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        input {
+            width: 100%;
+            height: 2.5rem;
+            padding: 0 1rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            font-size: 14px;
+            font: inherit;
+
+            &:focus {
+                outline: none;
+                border-width: 1px;
+            }
+        }
+    }
+}
 
 // Utility --------------------------
 // Containers
@@ -294,4 +365,88 @@ footer {
     text-align: center;
 }
 
+.hidden {
+    display: none;
+}
+
+// Felmeddelande
+// Felmeddelande - error / success
+#message {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  border-radius: 5px;
+  text-align: center;
+
+  &:empty {
+    display: none;
+  }
+
+  &.success {
+    background: $success-bg;
+    color: $success-text;
+  }
+
+  &.error {
+    background: $error-bg;
+    color: $error-text;
+  }
+}
+
 // mediaqueries
+
+// Tablet
+@media (max-width: 768px) {
+    #weekly-menu {
+        .wrapper {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    .hero {
+
+        .hero-content {
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+
+                .btn {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+// Mobile
+@media (max-width: 480px) {
+    #weekly-menu {
+        .wrapper {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    header {
+        .wrapper {
+            nav ul {
+                li a{
+                    font-size: 0.9rem;
+                }
+            }
+        }
+        
+        .btn {
+            display: none;
+        }
+    }
+
+    footer {
+        .wrapper {
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+    }
+}

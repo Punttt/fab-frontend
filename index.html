@@ -4,20 +4,20 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FAB - Lunch i Sunsvall</title>
+    <title>FAB - Lunch i Sundsvall</title>
     <link rel="stylesheet" href="/src/styles/main.scss">
   </head>
   <body>
     <header>
       <div class="wrapper">
         <div class="logo">
-          <img src="/public/icons/logo.png" alt="fab logotyp">
+          <img src="/icons/logo.png" alt="fab logotyp">
         </div>
 
         <nav>
           <ul>
             <li><a href="/">HEM</a></li>
-            <li><a href="/">MENY</a></li>
+            <li><a href="#weekly-menu">MENY</a></li>
             <li><a href="#about">OM OSS</a></li>
           </ul>
         </nav>
@@ -25,6 +25,8 @@
 
       <a href="/" class="btn">KONTAKTA OSS</a>
     </header>
+
+    
     <section class="hero">
       <div class="hero-content">
         <h1>LUNCH OCH EVENT I CENTRALA SUNDSVALL</h1>
@@ -61,27 +63,8 @@
       <section id="weekly-menu">
         <div class="container">
           <h2>VECKANS LUNCHER</h2>
-          <div class="wrapper">
-            <div class="card">
-              <h3>MÅNDAG</h3>
-              <p>Kycklingfilé serveras med stekt potatis, dragon och parmesansås.</p>
-            </div>
-            <div class="card">
-              <h3>TISDAG</h3>
-              <p>Kycklingfilé serveras med stekt potatis, dragon och parmesansås.</p>
-            </div>
-            <div class="card">
-              <h3>ONSDAG</h3>
-              <p>Ugnsbakad kungsflundra serveras med färskpotatis, vitvinssås, rädisa & sockerärtor.</p>
-            </div>
-            <div class="card">
-              <h3>TORSDAG</h3>
-              <p>Kycklingfilé serveras med stekt potatis, dragon och parmesansås.</p>
-            </div>
-            <div class="card">
-              <h3>FREDAG</h3>
-              <p>Ugnsbakad kungsflundra serveras med färskpotatis, vitvinssås, rädisa & sockerärtor.</p>
-            </div>
+          <div class="wrapper" id="menu-container">
+            <!-- Här genereras korten för menyn -->
           </div>
         </div>
       </section>
@@ -127,7 +110,7 @@
     <footer>
       <div class="wrapper">
         <div class="logo-section">
-          <img src="/public/icons/logo.png" alt="fab logotyp">
+          <img src="/icons/logo.png" alt="fab logotyp">
           <p>Lunch & konferens i centrala Sundsvall</p>
         </div>
         <div class="links-section">
