@@ -1,5 +1,5 @@
 // API - url
-export const API_URL = "http://localhost:3000/api";
+export const API_URL = "https://fab-backend-l9o4.onrender.com/api";
 
 // Funktion för felmeddelande i UI:T
 // anropar id på elementet i UI:t, text = felmeddelande, type: class för error eller succes css.
