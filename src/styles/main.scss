@@ -58,7 +58,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute; /* ligger ovanpå hero-bilden */
+    background-color: rgba(201, 152, 119, 0.7);
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
@@ -259,6 +260,11 @@ footer {
 
     .booking-tabs {
         margin: 1rem 0;
+
+        p {
+            margin-top: 1rem;
+            font-style: italic;
+        }
     }
     form {
         display: flex;
@@ -396,6 +402,9 @@ footer {
 
 // Tablet
 @media (max-width: 768px) {
+    .btn {
+        padding: 0.5rem 0.75rem;
+    }
     #weekly-menu {
         .wrapper {
             grid-template-columns: repeat(2, 1fr);
