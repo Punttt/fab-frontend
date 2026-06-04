@@ -12,6 +12,13 @@ if(!token) {
 let currentMenuId = null;
 let currentItems = []; // Sparar rätter för den valda veckan
 
+// Laddar DOM 
+document.addEventListener("DOMContentLoaded", ()=>{
+    const today = new Date();
+    document.querySelector('input[name="week_number"]').value = getISOWeek(today);
+    document.querySelector('input[name="year"]').value = getISOWeekYear(today);    
+})
+
 // När token raderat redirect till login-sidan
 document.getElementById("logoutBtn").addEventListener("click", () => {
     sessionStorage.removeItem("token");
