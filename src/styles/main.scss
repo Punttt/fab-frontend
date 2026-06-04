@@ -34,6 +34,10 @@ $color-border:            #E5DDD0;  // diskreta linjer (du kan behöva justera)
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
 }
