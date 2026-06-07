@@ -29,17 +29,18 @@
         <div class="booking-tabs">
           <button class="btn active" data-tab="lunch">BOKA BORD</button>
           <button class="btn" data-tab="event">BOKA KONFERENS</button>
+          <p>Notering: Detta är en demonstrationssajt. Bokningsformuläret är inte kopplat till backend.</p>
         </div>
 
         <form id="form-lunch" class="booking-form active">
           <label for="name">Namn</label>
-          <input type="text" id="name">
+          <input type="text" id="name" required>
           <label for="phoneNumber">Telefon</label>
-          <input type="number" id="phoneNumber">
+          <input type="number" id="phoneNumber" required>
           <label for="time">Tid</label>
-          <input type="time" id="time">
+          <input type="time" id="time" required>
           <label for="date">Datum</label>
-          <input type="date" id="date">
+          <input type="date" id="date" required>
           <label for="persons">Personer</label>
           <select id="persons">
             <option value="1">1</option>
@@ -53,6 +54,7 @@
             <option value="9">9</option>
             <option value="10">10</option>
           </select>
+          <p id="message"></p>
           <button type="submit" class="btn">SKICKA BOKNING</button>
         </form>
 
@@ -85,7 +87,7 @@
           </ul>
         </div>
         <div class="location-section">
-          <h3>Hitta hit</h3>
+          <h3>Kontakta oss</h3>
           <p class="title">Telefon</p>
           <p>060 - 123 45</p>
           <p class="title">E-post</p>
@@ -99,6 +101,6 @@
         <a href="/login">Logga in</a>
       </div>
     </footer>
-    <script type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/booking.js"></script>
   </body>
 </html>

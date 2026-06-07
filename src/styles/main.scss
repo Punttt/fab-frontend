@@ -34,6 +34,10 @@ $color-border:            #E5DDD0;  // diskreta linjer (du kan behöva justera)
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 a {
     text-decoration: none;
 }
@@ -58,7 +62,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute; /* ligger ovanpå hero-bilden */
+    background-color: rgba(201, 152, 119, 0.7);
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 10;
@@ -259,6 +264,11 @@ footer {
 
     .booking-tabs {
         margin: 1rem 0;
+
+        p {
+            margin-top: 1rem;
+            font-style: italic;
+        }
     }
     form {
         display: flex;
@@ -373,6 +383,7 @@ footer {
 // Felmeddelande - error / success
 #message {
   margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 0.75rem;
   border-radius: 5px;
   text-align: center;
@@ -396,6 +407,9 @@ footer {
 
 // Tablet
 @media (max-width: 768px) {
+    .btn {
+        padding: 0.5rem 0.75rem;
+    }
     #weekly-menu {
         .wrapper {
             grid-template-columns: repeat(2, 1fr);
